@@ -8,7 +8,6 @@ use think\Request;
 class User extends Common
 {
     /**
-     * 显示资源列表
      *
      * @return \think\Response
      */
@@ -22,7 +21,6 @@ class User extends Common
     }
 
     /**
-     * 显示创建资源表单页.
      *
      * @return \think\Response
      */
@@ -41,7 +39,6 @@ class User extends Common
     }
 
     /**
-     * 保存新建的资源
      *
      * @param  \think\Request  $request
      * @return \think\Response
@@ -66,12 +63,11 @@ class User extends Common
         	$result=$user->save($data);
         }
         
-        $result==1 && $this->success('操作成功', '/admin/User/index/');
-        $result==0 && $this->success('操作失败', '/admin/User/create/');
+        $result==1 && $this->success('operation success!', '/admin/User/index/');
+        $result==0 && $this->success('operation faile', '/admin/User/create/');
     }
 
- /**
-     * 删除指定资源
+ 	/**
      *
      * @param  int  $id
      * @return \think\Response
@@ -89,12 +85,12 @@ class User extends Common
     		$result=$user->destroy($id);
     			
     		if($result==0){
-    			$this->success('操作失败，请重试');
+    			$this->success('operation faile');
     		} else {
-    			$this->success('操作成功', '/admin/User/index/');
+    			$this->success('operation success', '/admin/User/index/');
     		}
     	}
     	
-    	$this->success('非法操作，请重试');
+    	$this->success('operation faile，please retry');
     }
 }

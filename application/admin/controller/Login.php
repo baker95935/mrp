@@ -9,7 +9,6 @@ use think\Session;
 class Login extends Controller
 {
     /**
-     * 显示资源列表
      *
      * @return \think\Response
      */
@@ -19,7 +18,6 @@ class Login extends Controller
     }
     
     /**
-     * 保存新建的资源
      *
      * @param  \think\Request  $request
      * @return \think\Response
@@ -38,9 +36,9 @@ class Login extends Controller
     		$result=$user->validLogin($data);
     
     		if($result) {
-				return json_encode(['code'=>1,'msg'=>'登录成功！','url'=>url('/admin/Index/index/')]);
+				return json_encode(['code'=>1,'msg'=>'login success!','url'=>url('/admin/Index/index/')]);
     		} else {
-				return json_encode(['code'=>-1,'msg'=>'登录失败，用户名或者密码错!']);	
+				return json_encode(['code'=>-1,'msg'=>'login fail,please retry']);	
     		}
     		 
     	}
@@ -52,7 +50,7 @@ class Login extends Controller
     	Session::delete('password');
     
     	Session::clear();
-    	$this->success('退出成功', '/admin/Login/index/');
+    	$this->success('logout seccess!', '/admin/Login/index/');
     
     }
 }

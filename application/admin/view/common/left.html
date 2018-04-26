@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">后台管理系统</a>
+                <a class="navbar-brand" href="index.html">admin manage system</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -18,7 +18,7 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="{:url('/admin/Login/logout')}"><i class="fa fa-sign-out fa-fw"></i>退出</a>
+                        <li><a href="{:url('/admin/Login/logout')}"><i class="fa fa-sign-out fa-fw"></i>logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -31,16 +31,52 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="{:url('/admin/Index/index')}"><i class="fa fa-dashboard fa-fw"></i> 首页</a>
+                            <a href="{:url('/admin/Index/index')}"><i class="fa fa-dashboard fa-fw"></i>index</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> 管理员管理<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>order manage<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{:url('/admin/User/create')}">管理员添加</a>
+                                    <a href="{:url('/admin/User/create')}">add</a>
                                 </li>
                                 <li>
-                                    <a href="{:url('/admin/User/index')}">管理</a>
+                                    <a href="{:url('/admin/User/index')}">manage</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>sample manage<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{:url('/admin/User/create')}">add</a>
+                                </li>
+                                <li>
+                                    <a href="{:url('/admin/User/index')}">manage</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> payment manage<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{:url('/admin/User/create')}">add</a>
+                                </li>
+                                <li>
+                                    <a href="{:url('/admin/User/index')}">manage</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> admin manage<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{:url('/admin/User/create')}">add</a>
+                                </li>
+                                <li>
+                                    <a href="{:url('/admin/User/index')}">manage</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
